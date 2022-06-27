@@ -23,7 +23,7 @@ public class DireccionService {
 	}
 
 //consultar
-	public List<DireccionEntity> getUserAll(DireccionEntity direccionEntity) {
+	public List<DireccionEntity> getDireccionAll() {
 		return this.direccionRepository.findAll();
 	}
 

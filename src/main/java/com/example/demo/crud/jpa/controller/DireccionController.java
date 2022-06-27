@@ -35,8 +35,8 @@ public class DireccionController {
 
 //consultar todos
 	@GetMapping
-	public ResponseEntity<List<DireccionEntity>> getUserAll(DireccionEntity direccionEntity) {
-		return ResponseEntity.ok(this.direccionService.getUserAll(direccionEntity));
+	public ResponseEntity<List<DireccionEntity>> getUserAll() {
+		return ResponseEntity.ok(this.direccionService.getDireccionAll());
 	}
 
 //actualizar
