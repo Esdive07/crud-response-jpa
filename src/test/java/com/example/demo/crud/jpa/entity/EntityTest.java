@@ -13,11 +13,13 @@ public class EntityTest {
 
 	private UserEntity userEntity;
 	private DireccionEntity direccionEntity;
+	private DatosContactoEntity datosContactoEntity;
 
 	@BeforeEach
 	public void init() {
 		this.userEntity = new UserEntity();
 		this.direccionEntity = new DireccionEntity();
+		this.datosContactoEntity = new DatosContactoEntity();
 	}
 
 	@Test
@@ -75,4 +77,25 @@ public class EntityTest {
 		assertEquals(userEntity, this.direccionEntity.getUserEntity());
 	}
 
+	@Test
+	public void datosContactoEntity() {
+		Integer id = 1;
+		String email = "prueba@gmail.com";
+		String celular = "322222";
+		String telFijo = "23456";
+		UserEntity userEntity = new UserEntity();
+
+		this.datosContactoEntity.setId(id);
+		this.datosContactoEntity.setEmail(email);
+		this.datosContactoEntity.setCelular(celular);
+		this.datosContactoEntity.setTelFijo(telFijo);
+		this.datosContactoEntity.setUserEntity(userEntity);
+
+		assertEquals(id, this.datosContactoEntity.getId());
+		assertEquals(email, this.datosContactoEntity.getEmail());
+		assertEquals(celular, this.datosContactoEntity.getCelular());
+		assertEquals(telFijo, this.datosContactoEntity.getTelFijo());
+		assertEquals(userEntity, this.datosContactoEntity.getUserEntity());
+
+	}
 }
