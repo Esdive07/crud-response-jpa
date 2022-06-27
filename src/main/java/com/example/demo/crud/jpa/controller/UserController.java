@@ -34,8 +34,8 @@ public class UserController {
 
 //consultar
 	@GetMapping
-	public ResponseEntity<List<UserEntity>> getUserAll(UserEntity userEntity) {
-		return ResponseEntity.ok(this.userService.getUserAll(userEntity));
+	public ResponseEntity<List<UserEntity>> getUserAll() {
+		return ResponseEntity.ok(this.userService.getUserAll());
 	}
 
 //actualizar

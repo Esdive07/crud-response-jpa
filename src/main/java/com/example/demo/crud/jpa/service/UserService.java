@@ -24,7 +24,7 @@ public class UserService {
 	}
 
 //consultar
-	public List<UserEntity> getUserAll(UserEntity userEntity) {
+	public List<UserEntity> getUserAll() {
 		return this.userRepository.findAll();
 	}
 
